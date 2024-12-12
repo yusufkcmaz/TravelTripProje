@@ -1,0 +1,31 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*bu layout admin layoutu sharet dan oluşurduk indexe akabinde bağladık}*@
+<!--<-->@*h2>göre göre hata da yaptım Index</h2>*@
+<br />
+<p style=" font-size:25pt; font-family:Geneva;">-Blog Detay Tablosu-</p>
+
+<table class="table table-bordered table-striped , table-hover , table-green">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var D in Model)
+    {
+        <tr>
+            <td>@D.Id</td>
+            <td>@D.Baslık</td>
+            <td><a href="/Admin/BlogSil/@D.Id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/BlogGetir/@D.Id" class="btn btn-outline-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniBlog/" class="btn btn-outline-primary">Yeni Blog Ekleye Git</a>

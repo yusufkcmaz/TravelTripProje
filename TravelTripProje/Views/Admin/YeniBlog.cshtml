@@ -1,0 +1,33 @@
+﻿@model TravelTripProje.Models.Sınıflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<h2>Yeni Blog Ekleme</h2>*@
+<p style=" font-size:25pt; font-family:Geneva;">-Yeni Blog Ekleme-</p>
+
+<br />
+<form class="form-group" method="post">
+    @*==> form içindeki işlemler form da post işlemi yapınca çalışacak yani button kaydet vs..*@
+    @Html.LabelFor(x => x.Baslık)
+    @Html.TextBoxFor(x => x.Baslık, new { @class = "form-control", })
+    <br />
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", })
+    <br />
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control", })
+    <br />
+
+    @Html.LabelFor(x => x.Acıklama)
+    @Html.TextAreaFor(x => x.Acıklama, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-outline-primary">Blog Kaydet</button>
+
+
+
+</form>
+

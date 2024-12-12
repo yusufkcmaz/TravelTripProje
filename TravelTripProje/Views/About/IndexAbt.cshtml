@@ -1,0 +1,27 @@
+﻿@using TravelTripProje.Models.Sınıflar @*// bu ifade model içinde sınıflara ulaşmamızı sağlar*@ 
+@model List<Hakkımızda>
+@{
+    ViewBag.Title = "IndexAbt";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+@*//hakımda kısmı2*@
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımda</h3>
+
+            @*foreach klasi bir döngü ve in ile modelin içine gir p tagıyla ac değişkeni model yardımıyla yukarıdaki hakkımızdaki sql de değlerleri alır *@
+            
+            @foreach (var ac in Model)
+
+             {
+               <img src="@ac.FotoUrl" @*style="width:850px;height:400px;*@@*"*@alt="" /> 
+                <p>@ac.Açıklama</p>
+             }
+
+
+        </div>
+    </div>
+</div>
+
