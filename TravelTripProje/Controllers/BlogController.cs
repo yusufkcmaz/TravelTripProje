@@ -17,6 +17,7 @@ namespace TravelTripProje.Controllers
            // var bloglar =con.Blogs.ToList();
            by.Deger1=con.Blogs.ToList();
            by.Deger3=con.Blogs.Take(2).ToList();    
+           by.Deger4=con.Yorumlars.Take(3).ToList();    
             return View(by);
         }
         

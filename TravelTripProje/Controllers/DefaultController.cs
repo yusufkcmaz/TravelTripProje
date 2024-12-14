@@ -1,6 +1,7 @@
 ﻿//using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
@@ -15,7 +16,7 @@ namespace TravelTripProje.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Blogs.Take(5).ToList();
+            var degerler = c.Blogs.Take(10).ToList();
             return View(degerler);
 
         }
@@ -23,10 +24,7 @@ namespace TravelTripProje.Controllers
         {
             return View();
         }
-        public ActionResult iletişim()
-        {
-            return View();
-        }
+       
         public PartialViewResult Partial1()//=> bu partial blog sayfasının alt kısmıdır.
         {
           var degerler =c .Blogs.OrderByDescending(x=> x.Id).Take(2).ToList();
@@ -52,6 +50,7 @@ namespace TravelTripProje.Controllers
             var deger = c.Blogs.Take(3).OrderByDescending(x=> x.Id).ToList();
             return PartialView(deger);
         }
+       
 
 
     }

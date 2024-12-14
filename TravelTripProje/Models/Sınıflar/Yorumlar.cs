@@ -18,5 +18,6 @@ namespace TravelTripProje.Models.Sınıflar
 
 
 
+
     }
 }

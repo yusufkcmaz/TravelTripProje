@@ -53,7 +53,7 @@ namespace TravelTripProje.Controllers
             BL.BlogImage = G.BlogImage;
             BL.Tarih = G.Tarih;
             E.SaveChanges();
-            return RedirectToAction("Index");   
+            return RedirectToAction("Index");
         }
         public ActionResult YorumListesi()
         {
@@ -79,16 +79,31 @@ namespace TravelTripProje.Controllers
         public ActionResult YorumGuncelle(Yorumlar G)
         {
             var BL = E.Yorumlars.Find(G.Id);
-            BL.KullanıcıAdı= G.KullanıcıAdı;
+            BL.KullanıcıAdı = G.KullanıcıAdı;
             BL.Mail = G.Mail;
             BL.Yorum = G.Yorum;
             E.SaveChanges();
             return RedirectToAction("YorumListesi");
         }
 
+        public ActionResult MesajListesi()
+        {
+            var mesajlar = E.İletişims.ToList();
+            return View(mesajlar);
+        }
+
+
+        public ActionResult MesajSil(int id)
+        {
+            var MES = E.İletişims.Find(id);
+            E.İletişims.Remove(MES);
+            E.SaveChanges();
+            return RedirectToAction("MesajListesi");
 
 
 
+
+        }
     }
 }
 

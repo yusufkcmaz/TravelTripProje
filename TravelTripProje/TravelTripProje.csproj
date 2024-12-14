@@ -133,6 +133,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\İletisimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="RESİMLER\img.jpg" />
     <Content Include="RESİMLER\SİVAS.jpg" />
+    <Content Include="RESİMLER\çan.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -284,7 +286,9 @@
     <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\GirisYap\Login.cshtml" />
-    <Content Include="Views\Default\iletişim.cshtml" />
+    <Content Include="Views\İletisim\Index.cshtml" />
+    <Content Include="Views\İletisim\SendMessage.cshtml" />
+    <Content Include="Views\Admin\MesajListesi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

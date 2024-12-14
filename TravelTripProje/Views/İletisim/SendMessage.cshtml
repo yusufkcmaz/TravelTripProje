@@ -1,0 +1,73 @@
+﻿@model TravelTripProje.Models.Sınıflar.İletişim
+<!-- Bootstrap CSS Linki -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="form">
+    <form class="cmxform" id="contactForm" method="post">
+        <div>
+            <input type="text" class="textbox" name="AdSoyad" placeholder="İsim" required>
+        </div>
+
+        <div>
+            <input type="text" class="textbox" name="Mail" placeholder="Mail" required>
+        </div>
+        <div>
+            <input type="text" class="textbox" name="Konu" placeholder="Konu" required>
+        </div>
+        <div class="form1">
+            <textarea name="Mesaj" placeholder="Mesaj" required></textarea>
+        </div>
+
+        @*<div>
+                <button class="btn btn-danger" type="submit">Send Message</button>
+            </div>*@
+        <div>
+            <input type="submit" style="background-color: #6F4F28; color: ghostwhite; padding: 5px 10px; " value="Gönder">
+        </div>
+
+
+        @*<div>
+
+                <p><span class="read">Gönder</span></p>
+            </div>*@
+    </form>
+</div>
+
+
+
+
+@*<div class="form">
+        <form class="cmxform" id="contactForm" method="post">
+            <div>
+                <input type="text" class="textbox" value="İsim:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'İsim';}">
+            </div>
+            <div>
+
+                <input type="text" class="textbox" value="Mail:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+            </div>
+            <div>
+                <input type="text" class="textbox" value="Telefon:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telefon';}">
+            </div>
+            <div class="form1">
+
+                    <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Mesaj:</textarea>
+                </div>
+                <div>
+
+                    <p><span class="read">Gönder</span></p>
+                </div>
+        </form>
+    </div>*@
+
+@*<div class="form1">
+        <div>
+            <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Mesaj:</textarea>
+        </div>
+        <div>
+            <p><span class="read">Gönder</span></p>
+        </div>
+        <div>
+            <button class="btn btn-danger" type="submit">gönder</button>
+        </div>
+    </div>*@
